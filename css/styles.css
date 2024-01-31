@@ -1,0 +1,494 @@
+/* BODY/PRINCIPAL */
+
+.body-custom {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header-custom {
+    background-color: #333;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    padding: 10px;
+    
+}
+
+.nav-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    margin-right: 5px;
+    /* Reducido el espacio entre la imagen y el texto */
+    width: 32px;
+    /* Establecido el nuevo tamaño de la imagen */
+    height: 32px;
+    /* Establecido el nuevo tamaño de la imagen */
+}
+
+.nav-h1 {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-h1 a img {
+    width: 80px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Esto mantendrá la proporción original de la imagen */
+}
+
+
+/* logo musical */
+
+.material-symbols-outlined {
+    color: #a6c1ee;
+}
+
+/* MAIN */
+
+/* SECTION TÍTULO */
+
+.section-title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 3rem;
+    color: #333;
+    justify-content: center;
+    text-align: center;
+}
+
+/* SECTION CARD 1 */
+.custom-cards {
+    background: transparent;
+    /* Cambiado a fondo transparente */
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.custom-cards .hero-section {
+    align-items: flex-start;
+    background-color: rgba(15, 70, 103, 0);
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: 20px;
+    /* Puedes ajustar esto según sea necesario */
+}
+
+.custom-cards .card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    /* Puedes ajustar esto según sea necesario */
+    grid-row-gap: 20px;
+    /* Puedes ajustar esto según sea necesario */
+    max-width: 1200px;
+    /* Puedes ajustar esto según sea necesario */
+    width: 100%;
+}
+
+@media(min-width: 540px) {
+    .custom-cards .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 960px) {
+    .custom-cards .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.custom-cards .card {
+    list-style: none;
+    position: relative;
+}
+
+.custom-cards .card:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.custom-cards .card__background {
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    /* Puedes ajustar esto según sea necesario */
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+}
+
+.custom-cards .card:hover .card__background {
+    transform: scale(1.05) translateZ(0);
+}
+
+.custom-cards .card-grid:hover>.card:not(:hover) .card__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.custom-cards .card__content {
+    left: 0;
+    padding: 20px;
+    /* Puedes ajustar esto según sea necesario */
+    position: absolute;
+    top: 0;
+}
+
+.custom-cards .card__category {
+    color: #fff;
+    /* Puedes ajustar esto según sea necesario */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    /* Puedes ajustar esto según sea necesario */
+    text-transform: uppercase;
+}
+
+.custom-cards .card__heading {
+    color: #fff;
+    /* Puedes ajustar esto según sea necesario */
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+}
+
+
+
+/* Media Query para pantallas más pequeñas REVISAR.*/
+@media only screen and (max-width: 600px) {
+    .nav-custom {
+        flex-direction: row;
+        /* Cambiado a ROW en pantallas más pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+
+}
+
+/* FOOTER */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0; /* Reduje la altura del padding superior e inferior */
+    font-family: 'Roboto Slab', serif;
+    font-size: 300;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px; /* Añadí un margen izquierdo para separar los datos del borde izquierdo */
+    
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-logo {
+    width: 32px;
+    height: 32px;
+}
+
+/* footer logo para articulos */
+.footer-center-article {
+    flex: 1; /* Utiliza todo el espacio disponible en el centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer logo para articulos */
+.footer-center-article img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.button-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+    background: #6E6D70;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: #DFDEDF;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 20px; /* Ajustado el margen derecho del botón para todas las versiones */
+}
+
+.button-12:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: row; /* Mantenemos la dirección de la fila para versiones móviles */
+        justify-content: space-between; /* Alinea los elementos a ambos extremos del contenedor */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1; /* Añadida propiedad flex */
+        margin: 10px 20px; /* Ajustado el margen izquierdo y derecho para separar los elementos en pantallas pequeñas */
+        text-align: center; /* Alineado el texto al centro en pantallas pequeñas */
+    }
+
+    .button-12 {
+        margin-right: 20px; /* Ajustado el margen derecho del botón para versiones móviles */
+        margin-top: 10px; /* Agregado margen superior para separar el botón del contenido en pantallas pequeñas */
+    }
+}
+
+/* ARTICLES HTML */
+
+.article-section {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    color: #333;
+    position: relative; /* Añadido para posicionar elementos relativos a este contenedor */
+}
+
+.article-star {
+    display: flex;
+    align-items: center;
+}
+
+.article-star p {
+    margin-bottom: 18px; /* Ajusta según tus preferencias */
+}
+
+.exclusive-access {
+    margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author-image-circle {
+    width: 36px; /* Ajusta el tamaño del círculo según tus preferencias */
+    height: 36px; /* Ajusta el tamaño del círculo según tus preferencias */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px; /* Ajusta el margen derecho según tus preferencias */
+    border: 2px solid #333; /* Añadido para el borde del círculo */
+}
+
+.author-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-details {
+    flex-grow: 1; /* Para ocupar todo el espacio disponible */
+}
+
+.author-details p:first-child {
+    margin-bottom: -33px; /* Ajusta el margen superior según tus preferencias */
+}
+/* ARTICULOS DE FORMA INDIVIDUAL/SEPARADOS */
+
+.article-body{
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #DFDEDF;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.article-section{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.article-h2 {
+    font-size: 40px;
+    font-weight: 800px
+}
+
+.article-h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Estilo para los párrafos/// ARREGLA LA JUSTIFICACIÓN DE TEXTO EN EL BLOG */
+.article-section p,
+.principal-section p,
+.final-section p {
+    text-align: justify; /* Justifica el texto */
+    margin-bottom: 16px; /* Ajusta el espaciado entre párrafos según tus preferencias */
+    line-height: 2.2; /* Ajusta la altura de línea según tus preferencias */
+}
+
+/* TAMAÑO DE LETRA DE BLOG!!! */
+.principal-section p {
+    font-size: 15px; /* Ajusta el tamaño de letra según tus preferencias */
+}
+
+/* SECCIÓN FOTOGRAFÍA DE ARTÍCULO */
+.additional-section {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto; /* Mismo margen que la sección anterior */
+}
+
+.additional-section img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen según tus preferencias */
+    height: auto; /* Para mantener la proporción original de la imagen */
+}
+
+/* SECCIÓN EXPLÍCITA DEL BLOG */
+.principal-section {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto; /* Mismo margen que la sección anterior */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.first-letter-larger:first-letter {
+    font-size: 4em; /* Ajusta el tamaño de la primera letra según tus preferencias */
+    font-weight: bold; /* Puedes ajustar esto según tus preferencias */
+}
+
+.highlight-section {
+    position: relative;
+    margin-bottom: 20px; /* Ajusta el margen inferior según tus preferencias */
+    padding-left: 40px; /* Ajusta según el espacio deseado a la izquierda del texto */
+}
+
+/* SECCION "HIGHLIGHT" */
+
+.highlight-section {
+    position: relative;
+    margin-bottom: 20px; /* Ajusta el margen inferior según tus preferencias */
+    padding-left: 40px; /* Ajusta según el espacio deseado a la izquierda del texto */
+}
+
+.highlight-line {
+    position: absolute;
+    background-color: #F3A712;
+    height: 3px; /* Grosor de la línea */
+}
+
+.highlight-line.top {
+    top: -10px; /* Ajusta la posición superior de la línea por encima del texto */
+    left: 0;
+    width: 80px; /* El doble de la longitud anterior */
+}
+
+.highlight-line.bottom {
+    bottom: -10px; /* Ajusta la posición inferior de la línea por debajo del texto */
+    left: 0;
+    width: 80px; /* El doble de la longitud anterior */
+}
+
+/* Asegurar que ambas líneas tengan el mismo grosor */
+.highlight-section .highlight-text {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté sobre las líneas */
+    margin-top: 20px; /* Ajusta la separación entre el texto y las líneas según tus preferencias */
+    margin-bottom: 20px; /* Ajusta el margen inferior del texto según tus preferencias */
+}
+
+.highlight-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+/* SECCIÓN IMAGEN DENTRO DEL ARTÍCULO. */
+
+.image-slot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px; /* Puedes ajustar el radio de borde según tus preferencias */
+}
+
+/* SECCIÓN FINAL / VEREDICTO */
+.final-section {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    margin: 30px auto; /* Mayor espaciado desde la sección anterior */
+}
+
+.final-section p {
+    margin-bottom: 10px; /* Ajusta el margen inferior entre párrafos según tus preferencias */
+}
+
+.final-words {
+    font-size: 0.9em; /* Ajusta el tamaño del texto según tus preferencias */
+    color: #777; /* Puedes ajustar el color según tus preferencias */
+}
+
+.final-info {
+    font-size: 0.9em; /* Ajusta el tamaño del texto según tus preferencias */
+    color: #555; /* Puedes ajustar el color según tus preferencias */
+}
+
+
+/* BARRA DE DESPLAZAMIENTO CSS/HTML/JS */
+
+.scroll-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px; /* Grosor de la barra */
+    background-color: #F3A712; /* Color de la barra */
+    width: 0; /* Ancho inicial de la barra */
+    transition: width 0.3s ease; /* Agrega una transición suave */
+}
